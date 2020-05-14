@@ -1,7 +1,6 @@
 body {
     width: 850px;
     text-align: justify;
-    background-color: white;
 
 }
 
@@ -22,7 +21,6 @@ button {
     padding: 2px 1px;
     background-color: darkslategray;
     color: white;
-    box-shadow: 5px 5px 20px lightgray;
     border: none;
     min-width: 60px
 }
@@ -36,7 +34,6 @@ select {
 
 .multi {
     border: 0px;
-    box-shadow: 5px 5px 20px gray;
 }
 
 div {
@@ -45,5 +42,4 @@ div {
 
 .frage {
     font-weight: bold;
-    text-shadow: 2px 2px 10px gray;
 }

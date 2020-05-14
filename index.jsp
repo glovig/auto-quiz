@@ -1,3 +1,11 @@
+<%-- 
+    Document   : index
+    Created on : 14.05.2020, 13:11:25
+    Author     : name
+--%>
+
+<%@page import="java.util.ArrayList"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
 <html>
@@ -12,6 +20,31 @@
 </head>
 
 <body>
+    <%  abstract class Auto {
+    private String name=""; 
+    private int punkte = 0;
+    
+
+    public Auto(String n, int p)  {
+        this.name = n;
+        this.punkte = p;
+    }
+    public Auto(){}
+
+    // getter:
+    public String getAutoName()  {
+        return this.name;            
+    }  
+    public int getAutoPunkte()  {
+        return this.punkte;
+    }
+
+    // setter:
+    public void setAutoPunkte(int p)  {
+        this.punkte = this.punkte + p;
+    }            
+}
+%>
     <header>
         Car Quiz 2020 | | Welche Car Typ sind Sie?
     </header>
@@ -20,23 +53,74 @@
         <div>
             <!-- HOMEPAGE -->
             <div>
-                <img src="img/home_car.jpg" alt="rainy day car" style="opacity: 60%; width: 100%">
+                <img src="../img/home_car.jpg" alt="rainy day car" style="opacity: 60%; width: 100%">
             </div>
 
             <hr>
-            <!-- FRAGE 1 -->
+
+            <!-- *************   F R A G E    1   ************* -->
+
+            <!--      Welches Geschlecht haben Sie?  -->
 
             <div class="frage">Frage 1: TODO_FRAGE</div>
 
             <div>
-                <form action="TODO">
+                <form method="post">
                     <input checked type="radio" name="TODO" value="Unbekannt"> Unbekannt<br>
                     <input type="radio" name="TODO" value="Junge"> Junge<br>
                     <input type="radio" name="TODO" value="Mädchen"> M&auml;dchen<br>
-                    <button type="submit" name="TODO">Weiter</button>
+                    <button type="submit" name="sende">Weiter</button>
                 </form>
             </div>
             <hr>
+
+            <%    
+               
+    out.println("******************** Ausgabe ******************");
+       out.println(request.getParameter("TODO"));
+      
+   ArrayList<Auto> AL_Auto = new ArrayList<Auto>();
+    AL_Auto.add(new Auto("Dodge Viper", 0));
+    AL_Auto.add(new Auto("Pontiac GTO", 0));
+    AL_Auto.add(new Auto("FIAT 500", 0));
+    AL_Auto.add(new Auto("Tesla Model-S", 0));
+    AL_Auto.add(new Auto("Maibach S650", 0));
+    AL_Auto.add(new Auto("PT Cruiser", 0));
+    AL_Auto.add(new Auto("Toyota Celica", 0));
+    AL_Auto.add(new Auto("Landrover Defender", 0));
+    AL_Auto.add(new Auto("Harley Davidson", 0));
+           
+        
+    String antwort1 = request.getParameter("TODO");
+    if (antwort1 != null)  {
+        if (antwort1 == "Unbekannt")  {
+            int[]x = {1,2,3,4,5,6,7,8,9};
+            for (int i=0;i<AL_Auto.size();i++)  {
+                AL_Auto.get(i).setAutoPunkte(x[i]);
+            }
+        }
+        if (antwort1 == "Junge")  {
+            int[]x = {1,2,3,4,5,6,7,8,9};
+            for (int i=0;i<AL_Auto.size();i++)  {
+                AL_Auto.get(i).setAutoPunkte(x[i]);
+            }
+        }
+        if (antwort1 == "M&auml;dchen")  {
+            int[]x = {1,2,3,4,5,6,7,8,9};
+            for (int i=0;i<AL_Auto.size();i++)  {
+                AL_Auto.get(i).setAutoPunkte(x[i]);
+            }
+        }
+    }
+            
+
+    for (int i=1;i<AL_Auto.size()-1;i++)  {
+        out.println("Auto-Punktzahl: " +  AL_Auto.get(i).getAutoPunkte());
+    }
+
+    %>
+
+
 
             <!-- FRAGE 2 -->
 
@@ -175,7 +259,7 @@
             <hr>
 
             <!-- FRAGE 10.5 MULTIPLE SELECT
-                Gorilla, Waldo, NULL  -->
+        Gorilla, Waldo, NULL  -->
 
             <div class="frage">Frage 10.5 TODO_FRAGE</div>
 
