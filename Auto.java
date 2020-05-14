@@ -6,7 +6,7 @@
  *
  * @author Ulrich Sackewitz
  */
-abstract class Auto {
+final class Auto {
     private String name=""; 
     private int punkte = 0;
 

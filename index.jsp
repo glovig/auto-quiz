@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <%  abstract class Auto {
+    <--%  final class Auto {
     private String name=""; 
     private int punkte = 0;
     
@@ -44,7 +44,7 @@
         this.punkte = this.punkte + p;
     }            
 }
-%>
+%-->
     <header>
         Car Quiz 2020 | | Welche Car Typ sind Sie?
     </header>
