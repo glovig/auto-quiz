@@ -1,0 +1,48 @@
+body {
+    width: 850px;
+    text-align: justify;
+    background-color: white;
+
+}
+
+header,
+footer {
+    width: 800px;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    font-weight: bolder;
+    background-color: #33ee33;
+    opacity: 80%
+}
+
+
+button {
+    margin: 2px 5px 2px 5px;
+    padding: 2px 1px; 
+    background-color: darkslategray;
+    color: white;
+    box-shadow: 5px 5px 20px lightgray;
+    border: none;
+    min-width: 60px
+}
+
+select {
+    margin: 2px 5px 2px 5px;
+    min-width: 55px;
+    padding 2px;
+    background-color: beige
+}
+
+.multi {
+    border: 0px box-shadow: 5px 5px 20px gray;
+}
+
+div {
+    padding: 4px;
+}
+
+.frage {
+    font-weight: bold;
+    text-shadow: 2px 2px 10px gray;
+}
