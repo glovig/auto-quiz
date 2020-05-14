@@ -19,7 +19,7 @@ footer {
 
 button {
     margin: 2px 5px 2px 5px;
-    padding: 2px 1px; 
+    padding: 2px 1px;
     background-color: darkslategray;
     color: white;
     box-shadow: 5px 5px 20px lightgray;
@@ -30,12 +30,13 @@ button {
 select {
     margin: 2px 5px 2px 5px;
     min-width: 55px;
-    padding 2px;
+    padding: 2px;
     background-color: beige
 }
 
 .multi {
-    border: 0px box-shadow: 5px 5px 20px gray;
+    border: 0px;
+    box-shadow: 5px 5px 20px gray;
 }
 
 div {
