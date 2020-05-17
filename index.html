@@ -151,8 +151,8 @@
 
             <div>
                 <form action="TODO">
-                    <input type=button name="A" value="Ja"> &nbsp;
-                    <input type=button name="A" value="Nein"> &nbsp;
+                    <input type=button name="A" value=" "> &nbsp;
+                    <input type=button name="A" value=" "> &nbsp;
                     <input type=button name="A" value="W&uuml;rden Sie ihn dr&uuml;cken">
                 </form>
             </div>
@@ -196,14 +196,45 @@
 
             <div>
                 <form action="TODO" method="post">
-                    <input type="text" name="TODO" value="TODO" style="width: 500px">
+                    <input type="text" name="TODO" placeholder="enter text here" style="width: 500px">
                     <div><button type="submit" name="TODO">Weiter</button></div>
                 </form>
             </div>
             <hr>
         </div>
     </main>
+
+    <!--  DOCUMENTATION -->
+    <a onclick="show()" style="cursor: pointer; context-menu=false">
+        <h3>documentation</h3>
+    </a>
+    <div id="close" style="display: none">
+        <div>
+            <embed id="close" src="auto-quiz.pdf" type="application/pdf" width="800px" height="1200px">
+            <a onclick="show()" style="cursor: pointer; context-menu=false">
+                <h3>documentation</h3>
+            </a></div>
+
+
+    </div>
     <footer>
+
         Thank you for playing and thanks to our team for an awesome job!!
     </footer>
-</body></html>
+    <script>
+        function show() {
+            var x = document.getElementById("close");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+    </script>
+
+    <hr>
+
+</body>
+
+</html>
